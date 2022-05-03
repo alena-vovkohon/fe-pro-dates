@@ -24,19 +24,18 @@ function getDay(date, lang) {
     },
   };
   let day;
-    Object.entries(dayNames[lang]).map((item) => {
+  Object.entries(dayNames[lang]).map((item) => {
     if (Number(item[0]) === date.getDay()) {
-      day = item[1]
-    }
-  })
-  return day
-  
+      day = item[1];
+    };
+  });
+  return day;
 }
 
 // Принимает объект даты, и должно вернуть компоненты даты в виде строки.
 // Вид должен быть такой 12:02(часы и минуты), то есть если у вас одно число на одном из
 // компонентов, то добавляем 0 перед ним
-const formatTime = (date)=> `${String(date.getHours()).padStart(2, 0)}:${String(date.getMinutes()).padStart(2, 0)}`
+const formatTime = (date) => `${String(date.getHours()).padStart(2, 0)}:${String(date.getMinutes()).padStart(2, 0)}`;
 
 /*
 Напишите функцию getLastDayOfMonth(year, month), 
