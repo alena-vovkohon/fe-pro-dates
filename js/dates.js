@@ -23,13 +23,15 @@ function getDay(date, lang) {
       6: 'Суббота',
     },
   };
-  let day;
-  Object.entries(dayNames[lang]).map((item) => {
-    if (Number(item[0]) === date.getDay()) {
-      day = item[1];
-    };
-  });
-  return day;
+  // let day;
+  // Object.entries(dayNames[lang]).map((item) => {
+  //   if (Number(item[0]) === date.getDay()) {
+  //     day = item[1];
+  //   };
+  // });
+  // return day;
+
+  return dayNames[lang][date.getDay()]
 }
 
 // Принимает объект даты, и должно вернуть компоненты даты в виде строки.
